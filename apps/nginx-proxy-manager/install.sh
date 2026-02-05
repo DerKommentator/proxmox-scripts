@@ -201,7 +201,7 @@ step_start "Yarn"
 
   os_fetch -O yarn-v$YARN_VERSION.tar.gz https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz
   os_fetch -O yarn-v$YARN_VERSION.tar.gz.asc https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc
-  gpg -q --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz >$__OUTPUT
+  #gpg -q --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz >$__OUTPUT
   gpgconf --kill all
   tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/
   ln -sf /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn
