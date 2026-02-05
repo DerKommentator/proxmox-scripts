@@ -177,7 +177,7 @@ step_start "Node.js"
       step_end "Architecture not supported: ${CLR_CYB}$EPS_OS_ARCH${CLR}" 1
     fi
 
-    _nodePackage="node-$NODE_VERSION-linux-$_nodeArch-musl.tar.xz"
+    _nodePackage="node-$NODE_VERSION-linux-$_nodeArch.tar.xz"
     os_fetch -O $_nodePackage https://unofficial-builds.nodejs.org/download/release/$NODE_VERSION/$_nodePackage
     os_fetch -O SHASUMS256.txt https://unofficial-builds.nodejs.org/download/release/$NODE_VERSION/SHASUMS256.txt
   else
